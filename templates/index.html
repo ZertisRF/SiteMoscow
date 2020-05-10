@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Путеводитель по городу Москва</h1>
+<img src="static/img/Moscow.jpg"
+   width="1200" height="674" alt="здесь должна была быть картинка Москвы">
+<p style="text-align: center"><a class="btn btn-primary " href="/best">
+    Москва: лучшее</a></p>
+<p style="text-align: center"><a class="btn btn-primary " href="/family">
+    Москва для семейного отдыха</a></p>
+<p style="text-align: center"><a class="btn btn-primary " href="/no_money">
+    Москва без лишних трат</a></p>
+<p style="text-align: center"><a class="btn btn-primary " href="/forour">
+    Москва "для своих"</a></p>
+<p style="text-align: center"><a class="btn btn-primary " href="/out_of_town">
+    Москва - загородные прогулки и экскурсии</a></p>
+{% if current_user.is_authenticated %}
+<p style="text-align: left"><a href="news" class="btn btn-secondary">Добавить отзыв</a></p>
+{% endif %}
+<p style="text-align: left"><a href="reviews" class="btn btn-secondary">Посмотреть отзывы</a></p>
+{% endblock %}
